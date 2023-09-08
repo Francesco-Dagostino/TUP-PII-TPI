@@ -1,7 +1,8 @@
 # Trabajo Práctico I - Programación II
-
+#Integrantes: Thiago Campagnaro - Francesco Dagostino. 
 
 import os
+from bibloteca import generar_devolucion, gestionar_prestamo, eliminar_ejemplar_libro, mostrar_ejemplares_prestados, registrar_nuevo_libro
 
 print("Bienvenido!")
 respuesta = ''
@@ -16,30 +17,25 @@ def menu():
 
 while respuesta != "salir":
     menu()
-    opt = input("\n Ingrese la opción de menú: ")
+    opt = input("\nIngrese la opción de menú: ")
     os.system ("cls") #Limpiar pantalla
     if opt.isnumeric():
         if int(opt) == 1:
-            #completar
-            print()
+            gestionar_prestamo()
         elif int(opt) == 2:
-            #completar
-            print()
+            generar_devolucion()
         elif int(opt) == 3:
-            #completar
-            print()
+            registrar_nuevo_libro()
         elif int(opt) == 4:
-            #completar
-            print()
+            eliminar_ejemplar_libro()
         elif int(opt) == 5:
-            #completar
-            print()
+            mostrar_ejemplares_prestados()
         elif int(opt) == 6:
             respuesta = "salir"
         else: print("Ingrese una opción válida")
     else: 
-        print("Ingrese una opción numérica")
+        print()
+    input("Presione cualquier tecla para continuar....\n") # Pausa
     
-    input("Presione cualquier tecla para continuar....") # Pausa
-
-print("Hasta luego!.")
+    print("Hasta luego!.")
+    
